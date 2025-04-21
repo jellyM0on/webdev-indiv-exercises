@@ -1,0 +1,265 @@
+body {
+    width: 100vw; 
+    font-family: system-ui;
+    margin: 0;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, p {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* header */
+
+header {
+    /* border: solid 1px black;  */
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 8rem 0.5rem 8rem;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    box-sizing: content-box;
+    z-index: 99999;
+}
+
+header ul {
+    list-style: none;
+    display: flex; 
+    gap: 2rem;
+}
+
+li > a{
+    cursor: pointer;
+    color: black; 
+    text-decoration: none;
+}
+
+li > a:hover {
+  text-decoration: underline;
+}
+
+/* footer */
+
+footer {
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    color: rgba(0, 0, 0, 0.235);
+}
+
+/* main content */
+
+main {
+    padding: 0 8rem 0 8rem;
+    background-image: url("./assets/bg.png");
+    background-position: right;
+    z-index: -99;
+}
+
+#home-landing,
+#home-hobbies {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#home-landing div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#landing-text-container h4 {
+    font-size: 2rem;
+}
+
+#landing-text-container h2 {
+    font-size: 4rem;
+}
+
+#landing-text-container p {
+    font-size: 1.5rem;
+}
+
+#landing-img-container {
+    align-items: center;
+}
+
+#landing-img {
+    width: 60%;
+    border-radius: 100%;
+}
+
+#btn {
+    width: fit-content;
+    padding: 0.5rem;
+    border-radius: 20px;
+    background-color: rgb(244, 186, 210);
+    border: dashed 1px white;
+    font-weight: bold;
+}
+
+#btn:hover {
+    background-color: white;
+    border: dashed 1px rgb(244, 186, 210);
+    cursor: pointer;
+}
+
+#home-hobbies {
+    padding: 4rem 0 4rem 0;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+}
+
+#hobbies-img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('./assets/hobbies-bg.png');
+    background-size: 60%;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 180%;
+} 
+
+#hobbies-img-container img {
+    width: 50%;
+    position: relative;
+}
+
+#hobbies-text-container {
+    text-align: right;
+}
+
+#hobbies-text-container {
+    padding: 1rem; 
+    background-color: white;
+    border: dashed 1px rgb(244, 186, 210);
+    border-radius: 20px;
+}
+
+#home-skills {
+    padding: 4rem 0 4rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    text-align: center;
+    gap: 2rem;
+}
+
+table {
+    width: 80%;
+    border: dashed 1px rgb(244, 186, 210);
+    border-radius: 20px;
+    border-spacing: 0.5rem;
+}
+
+table th:first-child {
+    border-top-left-radius: 20px;
+}
+
+table th:last-child {
+    border-top-right-radius: 20px;
+}
+
+table tr:last-child td:first-child {
+    border-bottom-left-radius: 20px;
+}
+
+table tr:last-child td:last-child {
+    border-bottom-right-radius: 20px;
+}
+
+table th {
+    background-color: rgb(244, 186, 210);
+    color: black;
+    padding: 0.5rem;
+}
+
+table td {
+    padding: 0.5rem;
+}
+
+table tr:nth-child(even){
+    background-color: white;
+}
+
+table tr:nth-child(odd){
+    background-color: rgba(244, 186, 210, 0.407);
+}
+
+.textmarker-effect {
+    position: relative;
+    padding-left: 10px;
+    padding-right: 10px;
+  
+    &:before {
+        position: absolute;
+        z-index: -1;
+        content: '';
+        background: rgb(244, 186, 210);
+        height: 4rem;
+        left: 0;
+        bottom: 0px;
+        width: 0%;
+        opacity: 0.7;
+        animation: textmarker-animation 0.5s forwards;
+    }
+}
+
+@keyframes textmarker-animation {
+    to {
+        width: 100%;
+    }
+}
+
+/* contact page */
+
+#contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 0 4rem 0;
+    min-height: 70vh;
+}
+
+#contact-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    background-color: white;
+    border: dashed 1px rgb(244, 186, 210);
+    padding: 2rem;
+    border-radius: 20px;
+    width: 50%;
+}
+
+.contact-item {
+    display: flex; 
+    gap: 1rem;
+    align-items: center;
+}
+
+.contact-item img {
+    width: 2rem;
+}
+
+.contact-item img:hover {
+    cursor: pointer;
+    filter: invert(82%) sepia(35%) saturate(482%) hue-rotate(292deg) brightness(100%) contrast(92%);
+}

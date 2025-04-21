@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ToDo List</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <img src="./assets/clip.png" alt="" id="clip-decor" />
+    </header>
+    <main>
+      <section id="title">
+        <img src="./assets/ribbon.png" alt="" />
+        <h1>My Todo List</h1>
+      </section>
+      <section id="date-info">
+        <div>
+          <img src="./assets/clock.png" alt="" />
+          <p id="time">00:00</p>
+        </div>
+        <div>
+          <img src="./assets/calendar.png" alt="" />
+          <p id="day">-- -- -- ----</p>
+        </div>
+      </section>
+      <section id="todo-container">
+        <div id="todo-list">
+          <table>
+            <thead>
+              <tr>
+                <th>Status</th>
+                <th>Task</th>
+                <th>Due Date</th>
+                <th>Priority</th>
+                <th>Notes</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody id="todo-list-body"></tbody>
+          </table>
+        </div>
+        <div id="todo-side">
+          <div id="new-todo">
+            <div id="new-todo-header">
+              <h2>New</h2>
+              <img src="./assets/star.png" alt="star" />
+            </div>
+            <div class="todo-input">
+              <label for="task">TASK</label>
+              <input type="text" id="task" placeholder="Add task name..." />
+            </div>
+            <div class="todo-input">
+              <label for="due-date">DUE DATE</label>
+              <input type="date" id="due-date" />
+            </div>
+            <div class="todo-input">
+              <label for="priority">PRIORITY</label>
+              <select name="priority" id="priority">
+                <option value="Low">Low</option>
+                <option value="Medium">Medium</option>
+                <option value="High">High</option>
+              </select>
+            </div>
+            <div class="todo-input">
+              <label for="notes">NOTES</label>
+              <textarea
+                name="notes"
+                id="notes"
+                placeholder="Add notes..."
+              ></textarea>
+            </div>
+          </div>
+          <p id="error-field"></p>
+          <button id="add-todo-btn">Add Todo</button>
+          <img src="./assets/Pompompurin.png" alt="pompom" />
+        </div>
+      </section>
+    </main>
+    <script src="./main.js"></script>
+  </body>
+</html>

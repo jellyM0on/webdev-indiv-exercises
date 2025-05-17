@@ -1,5 +1,5 @@
 ## Task
-- Structure the page using like <header>, <nav>, <main>, <section>, and <footer>
+- Structure the page using header, nav, main, section, and footer
 - Include the following content:
   - Your name and a short tagline
   - A simple menu with at least two links
